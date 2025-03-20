@@ -1,0 +1,65 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.main;
+
+/**
+ *
+ * @author Zukhruf Fatima
+ */
+public class Employee {
+    private String name;
+    private int salary;
+    
+    public Employee(String name, int salary){
+        this.name=name;
+        this.salary=salary;
+    }
+    public void display(){
+        System.out.println(name+" has a salary of "+salary);
+    }
+}
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.main;
+
+/**
+ *
+ * @author Zukhruf Fatima
+ */
+public class Manager extends Employee {
+    String department;
+
+    public Manager(String name, int salary,String department) {
+        super(name, salary);
+        this.department=department;
+    }
+    public void displayInfo(){
+        System.out.println("Department: "+department);
+       
+    }
+}
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.main;
+
+/**
+ *
+ * @author Zukhruf Fatima
+ */
+public class Main {
+
+    public static void main(String[] args) {
+       Manager manager=new Manager("John",89998,"Information technology");
+       //accessing employee class method
+       manager.display();
+       
+       //accessing manager class method.
+       manager.displayInfo();
+    }
+}
